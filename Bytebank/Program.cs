@@ -18,6 +18,5 @@ Console.WriteLine("Saldo da Conta Da Maria = " + contaDaMaria.Saldo);
 
 Conta1.Transferir(50, contaDaMaria);
 
-Console.WriteLine("SAldo da Leandro = " + Conta1.Saldo);
 
 Console.WriteLine("Saldo da Maria " + contaDaMaria.Saldo);
