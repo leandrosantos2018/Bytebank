@@ -12,7 +12,7 @@ namespace Bytebank
         public int Numero_Agencia;
         public string Conta;
         public string Titular;
-        public double Saldo;
+        public double Saldo = 100;
 
         public string ResumoConta()
         {

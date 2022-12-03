@@ -2,7 +2,7 @@
 
 ContaCorrente Conta1 = new ContaCorrente();
 
-string result= Conta1.ResumoConta(15, "1010-x", "Leandro Santos", 100);
+string result = Conta1.ResumoConta(15, "1010-x", "Leandro Santos", 100);
 
 Console.WriteLine(result);
 
@@ -21,6 +21,3 @@ Conta1.Transferir(50, contaDaMaria);
 Console.WriteLine("SAldo da Leandro = " + Conta1.Saldo);
 
 Console.WriteLine("Saldo da Maria " + contaDaMaria.Saldo);
-
-
-
