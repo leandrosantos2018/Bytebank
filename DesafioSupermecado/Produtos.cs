@@ -8,9 +8,9 @@ namespace DesafioSupermecado
 {
     public class Produtos
     {
-       string Nome;
-       string Fabricante;
-       string CodigoDeBarra;
+       string? Nome;
+       string? Fabricante;
+       string? CodigoDeBarra;
        double ValorUnitario;
        double ValorDeCompra;
        int QtEstoque;
