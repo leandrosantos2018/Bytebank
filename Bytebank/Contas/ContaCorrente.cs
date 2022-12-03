@@ -9,9 +9,10 @@ namespace Bytebank.Contas
 {
     public class ContaCorrente
     {
+        public static int TotalDeContasCriadas { get; private set; }
 
         private int Numero_Agencia;
-        public int Numero_agencia
+        private  int Numero_agencia
         {
             get { return this.Numero_Agencia; }
             set {
@@ -25,11 +26,20 @@ namespace Bytebank.Contas
 
         //private string? _Conta;
 
-        public string Conta { get;set; }
+        public string Conta { get; }
 
         private double Saldo = 100;
 
-        private PessoaFisica? Titular;
+        public PessoaFisica? Titular;
+
+        public ContaCorrente(int numero_agencia,string conta)
+        {
+            this.Numero_agencia= numero_agencia;
+            this.Conta = conta;  
+            TotalDeContasCriadas++;
+        }
+
+      
 
 
 
@@ -39,17 +49,17 @@ namespace Bytebank.Contas
             return "teste";
         }
 
-        public string ResumoConta(int numero_agencia, string conta, PessoaFisica titular, double saldo)
-        {
-            Conta = conta;
-            Numero_Agencia = numero_agencia;
-            Titular = titular;
-            Saldo = saldo;
+        //public string ResumoConta(int numero_agencia, string conta, PessoaFisica titular, double saldo)
+        //{
+        //  //  Conta = conta;
+        //    Numero_Agencia = numero_agencia;
+        //    Titular = titular;
+        //    Saldo = saldo;
 
-            Console.WriteLine("Resumo da conta :");
-            return "Numero da Conta " + conta + " \nNumero da AG: " + numero_agencia + " \nTitular: "
-                + titular + "\nSaldo da Conta é: R$" + saldo;
-        }
+        //    Console.WriteLine("Resumo da conta :");
+        //    return "Numero da Conta " + conta + " \nNumero da AG: " + numero_agencia + " \nTitular: "
+        //        + titular + "\nSaldo da Conta é: R$" + saldo;
+        //}
 
         public void Depositar(double valor)
         {
